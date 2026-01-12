@@ -72,6 +72,8 @@ def savingsTime():
 # compound interest calc function
 def compoundInterest():
     a=0
+    def yearLoop():
+        
 
 # budget allocator function
 def budgetAllocator():
