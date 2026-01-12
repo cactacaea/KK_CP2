@@ -30,11 +30,15 @@ def main():
         choice = input("\n#1: Savings Time Calculator // Determine how much time it will take to save up to a goal based on monthly/weekly contributions.\n#2: Compound Interest // Determine the amount of money you would have based on an interest rate after an amount of years spent compounding.\n#3: Budget Allocator // \n#4: Sale Price Calculator // Determine a discounted price.\n#5: Tip Calculator // Find how much your total will be with an added tip.\n\nEnter the number to select your options:\n").lower().strip()
     # if input == an available option, call the necessary function
         if choice == "1": # save for a goal
-
+            savingsTime()
         elif choice == "2": # compound interest
+            compoundInterest()
         elif choice == "3": # budget allocator
+            budgetAllocator()
         elif choice == "4": # sales price discount
+            salesPrice()
         elif choice == "5": # tip
+            tip()
         else:
             print("\nError. // Try Again.")
 
@@ -49,15 +53,25 @@ def savingsTime():
     # if weekly contributions:
     if contribution_rate == "weekly":
         # goal divided by contribution #
-            # print how many weeks
-            # wait a few seconds and ask to calculate again
+        weeks = goal/contribution_amount
+        # print how many weeks
+        print(f"\nIt will take {weeks} weeks to save ${goal}")
+        # wait a few seconds and ask to calculate again
+        time.sleep(4)
+        again()
     # if monthly contributions
-    if contribution_rate == "monthly":
+    elif contribution_rate == "monthly":
         # goal divided by contribution #
-            # print how many weeks
-            # wait a few seconds and ask to calculate again
+        months = goal/contribution_amount
+        # print how many weeks
+        print(f"\nIt will take {weeks} weeks to save ${goal}")
+        # wait a few seconds and ask to calculate again
+        time.sleep()
+        again()
 
 # compound interest calc function
+def compoundInterest():
+    a=0
 
 # budget allocator function
 def budgetAllocator():
@@ -71,6 +85,7 @@ def budgetAllocator():
 # sales function
 def salesPrice():
     # original item cost input
+    original_item = input("\nHow much does the item originally cost?:\n")
     # discount percent input
     # calculated discount = original*discount percent/100
     # final price = original item - discount
@@ -81,8 +96,15 @@ def salesPrice():
 # tip calc function
 def tip():
     # user input for the inital bill
+    bill = input("\nHow much is the initial bill?:\n")
     # user input for tip percent
+    tip_percent = ("\nWhat percent of a tip would you like to give?:\n")
     # tip amount = orginal_price*tip/100
+    tip_amount = bill*tip_percent/100
     # total = original_price + tip amount
+    final_bill = bill + tip_amount
     # display results
+    print(f"\nThe tip amount is {tip_amount}, so your total is {final_bill}")
     # call again? function
+    time.sleep(4)
+    again()
