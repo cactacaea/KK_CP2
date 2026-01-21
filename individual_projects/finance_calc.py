@@ -1,4 +1,4 @@
-# KK 2nd, Finance Caclulator // Practice
+# KK 2nd, Finance Calculator
 
 import sys
 import time

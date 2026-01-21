@@ -18,7 +18,7 @@ print(r)
 # can be used for; level info, starting point, preset data, & anything you don't want changed !
 # methods; .count .index
 
-# sets; unordered, mutable
+# sets; unordered, mutable/changeable
 fruits = {"apple", "orange", "kiwi","pineapple","pear","pomegranate","orange"}
 fruits.remove("pineapple")
 fruits.add("watermelon")
